@@ -23,9 +23,11 @@ for iCount in range(1, gameNumber +1, 1):
         if teamRand > opponentRand:
             teamWin += 1
             print("Your team won game ", iCount," by ", teamRand, "-", opponentRand)
-        else:
+        elif teamRand < opponentRand:
             teamLoss += 1
             print("Your team lost game ", iCount," by ", teamRand, "-", opponentRand)
+        else:
+            continue
 
 # Displays team's record  
 print(teamName, " ", teamWin, "-", teamLoss)
